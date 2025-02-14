@@ -5,10 +5,12 @@ using ParadoxNotion.Design;
 namespace NodeCanvas.Tasks.Actions {
 
 	public class GatherFoodAT : ActionTask {
-
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
+        public BBParameter<int> food;
+        public BBParameter<bool> hungry;
+		public int maxFood = 5;
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit() {
 			return null;
 		}
 
@@ -16,13 +18,17 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			EndAction(true);
-		}
+            food.value += 1;
+        }
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			
-		}
+            if (food.value >= maxFood)
+            {
+                hungry.value = false;
+            }
+
+        }
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
