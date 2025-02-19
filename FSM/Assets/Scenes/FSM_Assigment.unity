@@ -1423,10 +1423,11 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"target":{"_value":1,"_name":"target","_id":"dedd1db1-109f-42ad-a5b8-6e921350296d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Dectectd
     ":{"_name":"Dectectd ","_id":"9b012b69-995f-4b8c-b12c-7ec0781388c2","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Food":{"_value":1,"_name":"Food","_id":"1e1328b3-9864-4fc1-ae7f-1906beed4878","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Food":{"_value":2,"_name":"Food","_id":"1e1328b3-9864-4fc1-ae7f-1906beed4878","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Hungry":{"_name":"Hungry","_id":"6a54de68-99af-4bbd-9bfc-1cf09b79f58c","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Bush":{"_value":3,"_name":"Bush","_id":"d252cedb-0072-4f60-abbf-e5f6dd8b8d44","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Dice":{"_name":"Dice","_id":"091351bf-b1d7-4942-b763-9fb767342c85","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 1526078008}
@@ -1448,7 +1449,7 @@ MonoBehaviour:
   - _json: '{"_name":"Dectectd ","_id":"9b012b69-995f-4b8c-b12c-7ec0781388c2","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_value":1,"_name":"Food","_id":"1e1328b3-9864-4fc1-ae7f-1906beed4878","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
+  - _json: '{"_value":2,"_name":"Food","_id":"1e1328b3-9864-4fc1-ae7f-1906beed4878","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_name":"Hungry","_id":"6a54de68-99af-4bbd-9bfc-1cf09b79f58c","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
@@ -1459,6 +1460,9 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 325667562}
+  - _json: '{"_name":"Dice","_id":"091351bf-b1d7-4942-b763-9fb767342c85","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
 --- !u!114 &1822725603
 MonoBehaviour:
   m_ObjectHideFlags: 0
