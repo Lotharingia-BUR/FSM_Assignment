@@ -1,0 +1,16 @@
+# Aspose.3D Wavefront OBJ Exporter
+# Copyright 2004-2024 Aspose Pty Ltd.
+# File created: 02/19/2025 18:19:30
+
+newmtl mat_18562489
+	illum 2
+	d 1
+	Tr 0
+	map_Kd texture_1.png
+	norm texture_2.png
+newmtl mat_30765041
+	illum 2
+	d 1
+	Tr 0
+	map_Kd texture_3.png
+	norm texture_4.png

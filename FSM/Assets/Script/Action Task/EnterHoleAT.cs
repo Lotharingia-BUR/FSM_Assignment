@@ -1,16 +1,19 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
+using UnityEngine.AI;
+using static UnityEngine.GraphicsBuffer;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
 	public class EnterHoleAT : ActionTask {
-
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
-			return null;
+        private NavMeshAgent navAgent;
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit() {
+            navAgent = agent.GetComponent<NavMeshAgent>();
+            return null;
 		}
 
 		//This is called once each time the task is enabled.
@@ -19,7 +22,9 @@ namespace NodeCanvas.Tasks.Actions {
 		protected override void OnExecute() {
 			//Hide the Prairie Dog
 			agent.transform.position = new Vector3(100, 0, 100);
-			EndAction(true);
+            navAgent.ResetPath();
+
+            EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
