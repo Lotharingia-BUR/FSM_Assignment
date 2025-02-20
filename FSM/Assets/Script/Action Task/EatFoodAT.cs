@@ -1,5 +1,7 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using System.Collections.Generic;
+using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Actions {
@@ -7,6 +9,8 @@ namespace NodeCanvas.Tasks.Actions {
 	public class EatFoodAT : ActionTask {
 		public BBParameter<int> food;
         public BBParameter<bool> hungry;
+		public BBParameter<GameObject> foodObj;
+        public BBParameter<GameObject> eatenFoodObj;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
@@ -18,15 +22,17 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 			food.value -= 1;
-
-		}
+			foodObj.value.SetActive(false);
+            eatenFoodObj.value.SetActive(true);
+        }
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 			if (food.value <= 0)
 			{
 				hungry.value = true;
-			}
+                eatenFoodObj.value.SetActive(false);
+            }
 			
 		}
 

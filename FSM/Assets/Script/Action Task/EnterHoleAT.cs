@@ -9,37 +9,23 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class EnterHoleAT : ActionTask {
         private NavMeshAgent navAgent;
-        //Use for initialization. This is called only once in the lifetime of the task.
-        //Return null if init was successfull. Return an error string otherwise
+
+		//animations objects
+		public BBParameter<GameObject> spriteObj;
+        public BBParameter<GameObject> digObj;
         protected override string OnInit() {
             navAgent = agent.GetComponent<NavMeshAgent>();
             return null;
 		}
 
-		//This is called once each time the task is enabled.
-		//Call EndAction() to mark the action as finished, either in success or failure.
-		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			//Hide the Prairie Dog
-			agent.transform.position = new Vector3(100, 0, 100);
+            //Hide the Prairie Dog
+            spriteObj.value.SetActive(false);
+            digObj.value.SetActive(true);
+            agent.transform.position = new Vector3(100, 0, 100);
             navAgent.ResetPath();
 
             EndAction(true);
-		}
-
-		//Called once per frame while the action is active.
-		protected override void OnUpdate() {
-			
-		}
-
-		//Called when the task is disabled.
-		protected override void OnStop() {
-			
-		}
-
-		//Called when the task is paused.
-		protected override void OnPause() {
-			
 		}
 	}
 }
