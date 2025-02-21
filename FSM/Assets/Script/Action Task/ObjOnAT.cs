@@ -5,14 +5,16 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class ExitHoleAT : ActionTask {
-		public BBParameter<Transform> target;
+	public class ObjOnAT : ActionTask {
+        //had issues with animations so we are doing this instead :P
+        public BBParameter<GameObject> gameObj;
 
         protected override string OnInit() {
 			return null;
 		}
+
 		protected override void OnExecute() {
-            agent.transform.position = target.value.position;
+            gameObj.value.SetActive(false);
             EndAction(true);
 		}
 	}

@@ -10,9 +10,6 @@ namespace NodeCanvas.Tasks.Actions {
 	public class EnterHoleAT : ActionTask {
         private NavMeshAgent navAgent;
 
-		//animations objects
-		public BBParameter<GameObject> spriteObj;
-        public BBParameter<GameObject> digObj;
         protected override string OnInit() {
             navAgent = agent.GetComponent<NavMeshAgent>();
             return null;
@@ -20,8 +17,6 @@ namespace NodeCanvas.Tasks.Actions {
 
 		protected override void OnExecute() {
             //Hide the Prairie Dog
-            spriteObj.value.SetActive(false);
-            digObj.value.SetActive(true);
             agent.transform.position = new Vector3(100, 0, 100);
             navAgent.ResetPath();
 
