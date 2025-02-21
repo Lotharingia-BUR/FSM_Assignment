@@ -27,7 +27,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Called once per frame while the action is active.
 		protected override void OnUpdate()
 		{
-			Debug.Log((agent.transform.position - hunter.value.position).magnitude);
+			//if hunter is within distance;
 			if (detectionRadius > (agent.transform.position - hunter.value.position).magnitude)
 			{
 				detected.value = true;

@@ -14,7 +14,7 @@ namespace NodeCanvas.Tasks.Actions {
 		}
 
 		protected override void OnExecute() {
-            gameObj.value.SetActive(false);
+            gameObj.value.GetComponent<Renderer>().enabled = true;
             EndAction(true);
 		}
 	}
